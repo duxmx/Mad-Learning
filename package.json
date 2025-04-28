@@ -1,0 +1,25 @@
+{
+  "name": "mad-learning-with-vision",
+  "version": "1.0.0",
+  "description": "A learning application that uses computer vision to identify objects and teach through rhymes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "education",
+    "children",
+    "computer-vision",
+    "learning",
+    "object-detection"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

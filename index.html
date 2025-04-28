@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mad Learning with Vision - Learn about objects using computer vision and fun rhymes">
+    <title>Mad Learning with Vision</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - Nunito for rounded, friendly font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load the COCO-SSD model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo" aria-hidden="true">🦉</div>
+            </div>
+            <h1>Mad Learning with Vision</h1>
+            <p class="tagline">Explore the world around you with AI-powered vision</p>
+        </header>
+
+        <section class="camera-section">
+            <div class="camera-container">
+                <div id="camera-fallback" class="camera-fallback">
+                    <i class="fas fa-camera camera-icon" aria-hidden="true"></i>
+                    <p>Camera access required</p>
+                    <p class="small">Please allow camera access when prompted</p>
+                </div>
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div id="screenshot-container" class="screenshot-container hidden">
+                <h3><i class="fas fa-check-circle" aria-hidden="true"></i> Detected Object</h3>
+                <div class="screenshot-wrapper">
+                    <canvas id="screenshot-canvas"></canvas>
+                </div>
+                <div class="result-container">
+                    <h2 id="object-name"></h2>
+                    <p id="object-description"></p>
+                </div>
+            </div>
+            
+            <div class="controls" id="controls-container">
+                <button id="capture-btn" class="get-started">
+                    <i class="fas fa-camera" aria-hidden="true"></i> GET STARTED
+                </button>
+            </div>
+            
+            <div class="instructions">
+                <p><strong>How it works:</strong> Point your camera at an object and press the button. The AI will identify the object and teach you about it with a fun rhyme!</p>
+                <div class="instruction-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Point camera at object</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Press the button</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Learn with a rhyme!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="voice-options">
+            <!-- Voice selector will be inserted here by JavaScript -->
+        </section>
+    </main>
+
+    <div class="wave-footer">
+        <footer class="footer">
+            <p>Connect with me on <a href="https://www.linkedin.com/in/maddux-taukave-castro/" target="_blank" aria-label="Visit my LinkedIn profile">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a></p>
+            <p class="copyright">© 2025 Mad Learning with Vision</p>
+        </footer>
+    </div>
+
+    <!-- Load our application scripts -->
+    <script src="rhymes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
